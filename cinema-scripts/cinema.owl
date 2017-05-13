@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#"
+     xml:base="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cinema="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#adresse -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#adresse"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#coordonneesGps -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#coordonneesGps"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#dateTournage -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#dateTournage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#estRealisePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#estRealisePar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Realisateur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#estSitueDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#estSitueDans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Lieu"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Ville"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#possede -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#possede">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Scene"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#seDerouleDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#seDerouleDans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Scene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Lieu"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Film -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Film">
+        <rdfs:label xml:lang="fr">Film</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Lieu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Lieu">
+        <adresse xml:lang="fr">adresse</adresse>
+        <coordonneesGps xml:lang="fr">coordonneesGps</coordonneesGps>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Realisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Realisateur">
+        <rdfs:label xml:lang="fr">Realisateur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Scene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Scene">
+        <dateTournage xml:lang="fr">dateTournage</dateTournage>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Ville -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Ville">
+        <rdfs:label xml:lang="fr">Ville</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
