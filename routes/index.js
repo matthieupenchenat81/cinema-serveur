@@ -20,4 +20,15 @@ router.get('/scenes', function (req, res, next) {
     });
 });
 
+router.get('/movies', function (req, res, next) {
+
+  DataService.getMovies()
+    .then(function (body) {
+      res.send(body);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+});
+
 module.exports = router;

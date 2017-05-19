@@ -28,45 +28,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#appellationCourante -->
-
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#appellationCourante"/>
-    
-
-
-    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#architecte -->
-
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#architecte"/>
-    
-
-
-    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#codeInsee -->
-
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#codeInsee"/>
-    
-
-
     <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#coordonneesGps -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#coordonneesGps"/>
     
 
 
-    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#dateProtection -->
-
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#dateProtection"/>
-    
-
-
     <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#dateTournage -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#dateTournage"/>
-    
-
-
-    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#periodeConstruction -->
-
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#periodeConstruction"/>
     
 
 
@@ -86,15 +56,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#estRealisePar">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Film"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Realisateur"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#estSitueAu -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#estSitueAu">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Monument"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Lieu"/>
     </owl:ObjectProperty>
     
 
@@ -150,18 +111,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Lieu">
         <adresse xml:lang="fr">adresse</adresse>
         <coordonneesGps xml:lang="fr">coordonneesGps</coordonneesGps>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Monument -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/sitan.coulibaly/ontologies/2017/2/cinema#Monument">
-        <appellationCourante xml:lang="fr"></appellationCourante>
-        <architecte xml:lang="fr"></architecte>
-        <codeInsee></codeInsee>
-        <dateProtection></dateProtection>
-        <periodeConstruction xml:lang="fr"></periodeConstruction>
     </owl:Class>
     
 

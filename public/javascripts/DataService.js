@@ -9,7 +9,8 @@ module.exports = function () {
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf‐schema#>\n';
 
     return {
-        getScenes: getScenes
+        getScenes: getScenes,
+        getMovies: getMovies
     };
 
 
@@ -25,6 +26,17 @@ module.exports = function () {
             ?idScene :dateTournage ?dateTournage; :seDerouleDans ?idLieu.\
             ?idLieu :adresse ?address; :coordonneesGps ?geoPoints; :estSitueDans ?idVille.\
             ?idVille rdfs:label ?nomVille.\
+        }';
+
+        return requestFusekiServer(payload);
+    }
+
+    function getMovies() {
+
+        var payload = prefixPayload + '\
+        SELECT ?labelFilm ?idFilm\
+        WHERE {\
+            ?idFilm a :Film; rdfs:label ?labelFilm.\
         }';
 
         return requestFusekiServer(payload);
