@@ -31,4 +31,17 @@ router.get('/movies', function (req, res, next) {
     });
 });
 
+//get monuments
+
+router.get('/monuments', function (req, res, next) {
+
+  DataService.getMonuments()
+    .then(function (body) {
+      res.send(body);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+});
+
 module.exports = router;

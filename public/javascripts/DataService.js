@@ -10,7 +10,8 @@ module.exports = function () {
 
     return {
         getScenes: getScenes,
-        getMovies: getMovies
+        getMovies: getMovies,
+        getMonuments: getMonuments
     };
 
 
@@ -42,7 +43,23 @@ module.exports = function () {
         return requestFusekiServer(payload);
     }
 
+    function getMonuments() {
 
+        // query SPARQL get monuments
+        var payload = prefixPayload + '\
+        SELECT ?appellationC ?archi ?periodeConstruction ?coordonneesGps\
+        WHERE {\
+            ?lieu a :Lieu;\
+            :coordonnesGps ?coordonnesGps.\
+            ?monument a :Monument;\
+            :periodeConstruction ?periodeConstruction;\
+            appellationCourante ?appellationCourante;\
+            :architecte ?archi;\
+            :estSitueAu ?lieu.\
+        }';
+
+        return requestFusekiServer(payload);
+    }
     // Utils ------------------------------------------------------------------------------------------
 
     function requestFusekiServer(payload) {

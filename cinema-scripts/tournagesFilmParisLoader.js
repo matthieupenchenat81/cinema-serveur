@@ -29,7 +29,7 @@ output_ontology += getScenesAndLocations(arr, coordinatesFromOpenstreetmap);
 output_ontology += getParisCityIntoRdfFormat();
 output_ontology += getParisCityAssociatedToAllLocations();
 
-fs.writeFileSync('rdf-output', output_ontology, 'utf8');
+fs.writeFileSync('rdf-output_films', output_ontology, 'utf8');
 
 console.log('\n\nFinished process : now you have to replace some strings');
 console.log('\t1. Add guillemet around lng and lat values :');
