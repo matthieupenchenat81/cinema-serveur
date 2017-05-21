@@ -35,9 +35,9 @@ module.exports = function () {
     function getMovies() {
 
         var payload = prefixPayload + '\
-        SELECT ?labelFilm ?idFilm\
+        SELECT DISTINCT ?labelFilm ?idFilm\
         WHERE {\
-            ?idFilm a :Film; rdfs:label ?labelFilm.\
+            ?idFilm a :Film; rdfs:label ?labelFilm; :possede ?scene.\
         }';
 
         return requestFusekiServer(payload);
