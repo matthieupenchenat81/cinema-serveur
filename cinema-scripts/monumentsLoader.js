@@ -41,7 +41,7 @@ console.log('\t\t"lng":"(-{0,1}[0-9.]+)" TO \"lng\":\"$1\"     ----- IDEM for "l
 // ajouter les Monuments avec les Lieu associés (relation estSitueAu), associant le Lieu à la ville de Paris
 function getMonuments(lesMonuments) {
 
-    var monuments = _.uniq(lesMonuments.map(function (record) {
+    var monuments = lesMonuments.map(function (record) {
 
         return {
             newUriLieu: record.fields.ref,
@@ -56,7 +56,7 @@ function getMonuments(lesMonuments) {
             ville : record.fields.nom_dept
         };
 
-    }));
+    });
 
     // Keep only monuments with coordinates
     var filteredMappings = monuments.filter(function(record) {
@@ -86,7 +86,7 @@ console.log(filteredMappings.length);
         
         whereQuery = '\t?ville rdfs:label "Paris"@fr.\n';
         whereQuery += '\tBIND(uri(concat("' + ontologyUri + '",  encode_for_uri("' + monument.newUriLieu + '"))) AS ?newUriLieu)\n\t';
-        whereQuery += 'BIND(uri(concat("' + ontologyUri + '",  encode_for_uri("' + monument.newMonument + '"))) AS ?newMonument)\n\t';
+        whereQuery += 'BIND(uri(concat("' + ontologyUri + '",  encode_for_uri("' + monument.newMonument+"_"+monument.newUriLieu + '"))) AS ?newMonument)\n\t';
 
         return acc + encapsulateWithInsert(insertQuery) + '\n' + encapsulateWithWhere(whereQuery) + ';\n\n';;
     }, '');
