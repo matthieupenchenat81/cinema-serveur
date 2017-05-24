@@ -49,14 +49,13 @@ module.exports = function () {
         var payload = prefixPayload + '\
         SELECT ?appellationC ?archi ?periodeConstruction ?coordonneesGps\
         WHERE {\
-            ?lieu a :Lieu;\
-            :coordonnesGps ?coordonnesGps.\
             ?monument a :Monument;\
             :periodeConstruction ?periodeConstruction;\
-            appellationCourante ?appellationCourante;\
+            :appellationCourante ?appellationC;\
             :architecte ?archi;\
             :estSitueAu ?lieu.\
-        }';
+            ?lieu :coordonneesGps ?coordonneesGps.\
+        }LIMIT 1000';
 
         return requestFusekiServer(payload);
     }
